@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     func exercisesGenerator(){
         let forChest = exercises.chestTricepsShouldersArray
-        let forAbs = exercises.absArray
+        let forAbs = AbsExercises().exercises.map { $0.name }
         let forBack = exercises.backBicepsArray
         let forLegs = exercises.legsArray
         
@@ -56,12 +56,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
