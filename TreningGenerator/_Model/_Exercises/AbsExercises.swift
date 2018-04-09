@@ -4,14 +4,14 @@ import Foundation
 enum AbsExercise: ExerciseProtocol {
     case simple(String)
     
+    
     var name: String {
         switch self {
         case .simple(let name): return name
         }
     }
-    
-
 }
+
 
 struct AbsExercises: ExerciseGroupProtocol {
     var groupName: String = "Abs"

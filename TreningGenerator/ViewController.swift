@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  TreningGenerator
-//
-//  Created by SZK on 09.04.2018.
-//  Copyright © 2018 SZK. All rights reserved.
-//
 
 import UIKit
 
@@ -23,7 +16,6 @@ class ViewController: UIViewController {
     
     func exercisesGenerator(){
         let forChest = exercises.chestTricepsShouldersArray
-        let forAbs = AbsExercises().exercises.map { $0.name }
         let forBack = exercises.backBicepsArray
         let forLegs = exercises.legsArray
         
@@ -34,7 +26,7 @@ class ViewController: UIViewController {
         ex1.text = exerciseForChest[0]
         ex2.text = exerciseForChest[1]
         
-        let exeriseForAbs = exercises.randomExerciseGenerator(forAbs)
+        let exeriseForAbs = exercises.randomExerciseGenerator(AbsExercises().exercises.map { $0.name })
         ex3.text = exeriseForAbs[0]
         ex4.text = exeriseForAbs[1]
         
