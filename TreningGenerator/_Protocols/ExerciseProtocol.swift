@@ -1,14 +1,13 @@
 
 import Foundation
 
+
 protocol ExerciseProtocol {
-    associatedtype Exercise
-    
-    var exercise: [Exercise] { get }
+    var name: String { get }
 }
 
 
-protocol ExerciseGroupProtocol: ExerciseProtocol {
+protocol ExerciseGroupProtocol {
     var groupName: String { get }
     var exercises: [ExerciseProtocol] { get }
 }
