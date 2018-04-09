@@ -15,6 +15,8 @@
 		196005A8207BE9A100B0CE47 /* TreningGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196005A7207BE9A100B0CE47 /* TreningGeneratorUITests.swift */; };
 		196005B5207BE9E300B0CE47 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196005B4207BE9E300B0CE47 /* Exercises.swift */; };
 		196005B7207BEA1700B0CE47 /* ExercisesEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196005B6207BEA1700B0CE47 /* ExercisesEnums.swift */; };
+		EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */; };
+		EF63148C207C0FDE00FD1245 /* AbsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63148B207C0FDE00FD1245 /* AbsExercises.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		196005A9207BE9A100B0CE47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		196005B4207BE9E300B0CE47 /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 		196005B6207BEA1700B0CE47 /* ExercisesEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesEnums.swift; sourceTree = "<group>"; };
+		EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProtocol.swift; sourceTree = "<group>"; };
+		EF63148B207C0FDE00FD1245 /* AbsExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsExercises.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +85,16 @@
 		19600591207BE9A100B0CE47 /* TreningGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				EF631489207C0F9800FD1245 /* _Model */,
+				EF631486207C0EC700FD1245 /* _Protocols */,
+				19600592207BE9A100B0CE47 /* AppDelegate.swift */,
+				19600599207BE9A100B0CE47 /* Assets.xcassets */,
 				196005B4207BE9E300B0CE47 /* Exercises.swift */,
 				196005B6207BEA1700B0CE47 /* ExercisesEnums.swift */,
-				19600592207BE9A100B0CE47 /* AppDelegate.swift */,
-				19600594207BE9A100B0CE47 /* ViewController.swift */,
-				19600596207BE9A100B0CE47 /* Main.storyboard */,
-				19600599207BE9A100B0CE47 /* Assets.xcassets */,
-				1960059B207BE9A100B0CE47 /* LaunchScreen.storyboard */,
 				1960059E207BE9A100B0CE47 /* Info.plist */,
+				1960059B207BE9A100B0CE47 /* LaunchScreen.storyboard */,
+				19600596207BE9A100B0CE47 /* Main.storyboard */,
+				19600594207BE9A100B0CE47 /* ViewController.swift */,
 			);
 			path = TreningGenerator;
 			sourceTree = "<group>";
@@ -100,6 +106,30 @@
 				196005A9207BE9A100B0CE47 /* Info.plist */,
 			);
 			path = TreningGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		EF631486207C0EC700FD1245 /* _Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */,
+			);
+			path = _Protocols;
+			sourceTree = "<group>";
+		};
+		EF631489207C0F9800FD1245 /* _Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF63148A207C0FC300FD1245 /* _Exercises */,
+			);
+			path = _Model;
+			sourceTree = "<group>";
+		};
+		EF63148A207C0FC300FD1245 /* _Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				EF63148B207C0FDE00FD1245 /* AbsExercises.swift */,
+			);
+			path = _Exercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +238,8 @@
 				196005B5207BE9E300B0CE47 /* Exercises.swift in Sources */,
 				19600595207BE9A100B0CE47 /* ViewController.swift in Sources */,
 				196005B7207BEA1700B0CE47 /* ExercisesEnums.swift in Sources */,
+				EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */,
+				EF63148C207C0FDE00FD1245 /* AbsExercises.swift in Sources */,
 				19600593207BE9A100B0CE47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
