@@ -16,7 +16,6 @@ struct Exercises {
     let chestTricepsShouldersArray = [ChestTricepsShoulders.a1.rawValue, ChestTricepsShoulders.a2.rawValue, ChestTricepsShoulders.a3.rawValue, ChestTricepsShoulders.a4.rawValue]
     let backBicepsArray = [BackBiceps.b1.rawValue, BackBiceps.b2.rawValue, BackBiceps.b3.rawValue, BackBiceps.b4.rawValue]
     let legsArray = [Legs.c1.rawValue, Legs.c2.rawValue, Legs.c3.rawValue, Legs.c4.rawValue]
-    let absArray = [Abs.d1.rawValue, Abs.d2.rawValue, Abs.d3.rawValue, Abs.d4.rawValue]
     
     
     func randomExercise(_ anyExerciseArray:[String]) -> Int {
