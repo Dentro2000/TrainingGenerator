@@ -16,5 +16,8 @@ enum AbsExercise: ExerciseProtocol {
 struct AbsExercises: ExerciseGroupProtocol {
     var groupName: String = "Abs"
     
-    var exercises: [ExerciseProtocol] = [AbsExercise.simple("abs simple 1"), AbsExercise.simple("abs simple 2")]
+    var exercises: [ExerciseProtocol] = [AbsExercise.simple("Spięcia brzucha w leżeniu"),
+                                         AbsExercise.simple("Mountain Climbers (Bieg w podporze)"),
+                                         AbsExercise.simple("Plank"),
+                                         AbsExercise.simple("Skręty tułowia z unoszeniem nóg")]
 }

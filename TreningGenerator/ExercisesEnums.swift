@@ -1,10 +1,3 @@
-//
-//  ExercisesEnums.swift
-//  TreningGenerator
-//
-//  Created by SZK on 09.04.2018.
-//  Copyright © 2018 SZK. All rights reserved.
-//
 
 import Foundation
 
@@ -30,13 +23,5 @@ enum Legs: String {
     case c2 = "Wykroki"
     case c3 = "Unoszenie bioder w leżeniu na plecach"
     case c4 = "Wspięcia na palce jednej nogi"
-    
-}
-
-enum Abs: String {
-    case d1 = "Spięcia brzucha w leżeniu"
-    case d2 = "Mountain Climbers (Bieg w podporze)"
-    case d3 = "Plank"
-    case d4 = "Skręty tułowia z unoszeniem nóg"
     
 }
