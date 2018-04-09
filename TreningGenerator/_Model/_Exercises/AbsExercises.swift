@@ -1,14 +1,20 @@
 
 import Foundation
 
-struct AbsExercise {
+enum AbsExercise: ExerciseProtocol {
+    case simple(String)
     
-    typealias Exercise = AbsExercise
+    var name: String {
+        switch self {
+        case .simple(let name): return name
+        }
+    }
+    
 
 }
 
 struct AbsExercises: ExerciseGroupProtocol {
-    var groupName: String
+    var groupName: String = "Abs"
     
-
+    var exercises: [ExerciseProtocol] = [AbsExercise.simple("abs simple 1"), AbsExercise.simple("abs simple 2")]
 }
