@@ -44,7 +44,6 @@
 		196005A3207BE9A100B0CE47 /* TreningGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreningGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		196005A7207BE9A100B0CE47 /* TreningGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreningGeneratorUITests.swift; sourceTree = "<group>"; };
 		196005A9207BE9A100B0CE47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		196005B4207BE9E300B0CE47 /* ToRemoveExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToRemoveExercises.swift; sourceTree = "<group>"; };
 		EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProtocol.swift; sourceTree = "<group>"; };
 		EF63148B207C0FDE00FD1245 /* AbsExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsExercises.swift; sourceTree = "<group>"; };
 		EF63148D207D21D000FD1245 /* ExerciseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLevel.swift; sourceTree = "<group>"; };
@@ -94,11 +93,10 @@
 		19600591207BE9A100B0CE47 /* TreningGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				EF631489207C0F9800FD1245 /* _Model */,
 				EF631486207C0EC700FD1245 /* _AbstractTypes */,
+				EF631489207C0F9800FD1245 /* _Model */,
 				19600592207BE9A100B0CE47 /* AppDelegate.swift */,
 				19600599207BE9A100B0CE47 /* Assets.xcassets */,
-				196005B4207BE9E300B0CE47 /* ToRemoveExercises.swift */,
 				1960059E207BE9A100B0CE47 /* Info.plist */,
 				1960059B207BE9A100B0CE47 /* LaunchScreen.storyboard */,
 				19600596207BE9A100B0CE47 /* Main.storyboard */,
