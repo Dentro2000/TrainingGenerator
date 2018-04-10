@@ -137,8 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				EF63148B207C0FDE00FD1245 /* AbsExercises.swift */,
-				EF631493207D2BA200FD1245 /* ChestTricepsShouldersExercises.swift */,
 				EF631495207D2EA400FD1245 /* BackBicepsExercises.swift */,
+				EF631493207D2BA200FD1245 /* ChestTricepsShouldersExercises.swift */,
 				EF631497207D2FB800FD1245 /* LegsExercises.swift */,
 			);
 			path = _Exercises;
