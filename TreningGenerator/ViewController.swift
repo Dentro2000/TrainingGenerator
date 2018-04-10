@@ -22,10 +22,18 @@ class ViewController: UIViewController {
         //let arrayOfArrays = [forChest, forAbs, forBack, forLegs]
         let arrayOfLables = [ex1,ex2, ex3, ex4, ex5, ex6, ex7, ex8].compactMap{ $0 }
 
+        let abs = ExercisesGroup(groupName: "Abs",
+                                          exercises: [
+                                           AbsExercise(name: "Spięcia brzucha w leżeniu", level: .simple),
+                                           AbsExercise(name: "Mountain Climbers (Bieg w podporze)", level: .simple),
+                                           AbsExercise(name: "Plank", level: .simple),
+                                           AbsExercise(name: "Skręty tułowia z unoszeniem nóg", level: .simple),
+                                            
+                                            AbsExercise(name: "Hard Abs 1", level: .hard)] )
 
         let allExecises: [String] = [
             exercises.randomExerciseGenerator(forChest),
-            exercises.randomExerciseGenerator(AbsExercises().exercises.map { $0.name }),
+            exercises.randomExerciseGenerator(abs.exercises.map { $0.name }),
             exercises.randomExerciseGenerator(forBack),
             exercises.randomExerciseGenerator(forLegs)
             ].flatMap{ $0 }

@@ -17,6 +17,7 @@
 		196005B7207BEA1700B0CE47 /* ExercisesEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196005B6207BEA1700B0CE47 /* ExercisesEnums.swift */; };
 		EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */; };
 		EF63148C207C0FDE00FD1245 /* AbsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63148B207C0FDE00FD1245 /* AbsExercises.swift */; };
+		EF63148E207D21D000FD1245 /* ExerciseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63148D207D21D000FD1245 /* ExerciseLevel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		196005B6207BEA1700B0CE47 /* ExercisesEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesEnums.swift; sourceTree = "<group>"; };
 		EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProtocol.swift; sourceTree = "<group>"; };
 		EF63148B207C0FDE00FD1245 /* AbsExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsExercises.swift; sourceTree = "<group>"; };
+		EF63148D207D21D000FD1245 /* ExerciseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLevel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EF63148B207C0FDE00FD1245 /* AbsExercises.swift */,
+				EF63148D207D21D000FD1245 /* ExerciseLevel.swift */,
 			);
 			path = _Exercises;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				196005B5207BE9E300B0CE47 /* Exercises.swift in Sources */,
 				19600595207BE9A100B0CE47 /* ViewController.swift in Sources */,
+				EF63148E207D21D000FD1245 /* ExerciseLevel.swift in Sources */,
 				196005B7207BEA1700B0CE47 /* ExercisesEnums.swift in Sources */,
 				EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */,
 				EF63148C207C0FDE00FD1245 /* AbsExercises.swift in Sources */,
