@@ -49,6 +49,7 @@ struct ExercisesModel {
         }
     }
     
+    
     var workoutPlan: [ExerciseProtocol] {
         func takeRandom(_ inArray: Array<Any>) -> [ExerciseProtocol] {
             let array = (inArray as NSArray).shuffled().prefix(2)
