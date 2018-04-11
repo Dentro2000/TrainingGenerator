@@ -13,8 +13,13 @@
 		1960059A207BE9A100B0CE47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19600599207BE9A100B0CE47 /* Assets.xcassets */; };
 		1960059D207BE9A100B0CE47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1960059B207BE9A100B0CE47 /* LaunchScreen.storyboard */; };
 		196005A8207BE9A100B0CE47 /* TreningGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196005A7207BE9A100B0CE47 /* TreningGeneratorUITests.swift */; };
-		196005B5207BE9E300B0CE47 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196005B4207BE9E300B0CE47 /* Exercises.swift */; };
-		196005B7207BEA1700B0CE47 /* ExercisesEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196005B6207BEA1700B0CE47 /* ExercisesEnums.swift */; };
+		EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */; };
+		EF63148C207C0FDE00FD1245 /* AbsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63148B207C0FDE00FD1245 /* AbsExercises.swift */; };
+		EF63148E207D21D000FD1245 /* ExerciseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63148D207D21D000FD1245 /* ExerciseLevel.swift */; };
+		EF631492207D2ABF00FD1245 /* ExercisesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF631491207D2ABF00FD1245 /* ExercisesModel.swift */; };
+		EF631494207D2BA200FD1245 /* ChestTricepsShouldersExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF631493207D2BA200FD1245 /* ChestTricepsShouldersExercises.swift */; };
+		EF631496207D2EA400FD1245 /* BackBicepsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF631495207D2EA400FD1245 /* BackBicepsExercises.swift */; };
+		EF631498207D2FB800FD1245 /* LegsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF631497207D2FB800FD1245 /* LegsExercises.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +43,13 @@
 		196005A3207BE9A100B0CE47 /* TreningGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreningGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		196005A7207BE9A100B0CE47 /* TreningGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreningGeneratorUITests.swift; sourceTree = "<group>"; };
 		196005A9207BE9A100B0CE47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		196005B4207BE9E300B0CE47 /* Exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
-		196005B6207BEA1700B0CE47 /* ExercisesEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesEnums.swift; sourceTree = "<group>"; };
+		EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProtocol.swift; sourceTree = "<group>"; };
+		EF63148B207C0FDE00FD1245 /* AbsExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsExercises.swift; sourceTree = "<group>"; };
+		EF63148D207D21D000FD1245 /* ExerciseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLevel.swift; sourceTree = "<group>"; };
+		EF631491207D2ABF00FD1245 /* ExercisesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesModel.swift; sourceTree = "<group>"; };
+		EF631493207D2BA200FD1245 /* ChestTricepsShouldersExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChestTricepsShouldersExercises.swift; sourceTree = "<group>"; };
+		EF631495207D2EA400FD1245 /* BackBicepsExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBicepsExercises.swift; sourceTree = "<group>"; };
+		EF631497207D2FB800FD1245 /* LegsExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegsExercises.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +91,14 @@
 		19600591207BE9A100B0CE47 /* TreningGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				196005B4207BE9E300B0CE47 /* Exercises.swift */,
-				196005B6207BEA1700B0CE47 /* ExercisesEnums.swift */,
+				EF631486207C0EC700FD1245 /* _AbstractTypes */,
+				EF631489207C0F9800FD1245 /* _Model */,
 				19600592207BE9A100B0CE47 /* AppDelegate.swift */,
-				19600594207BE9A100B0CE47 /* ViewController.swift */,
-				19600596207BE9A100B0CE47 /* Main.storyboard */,
 				19600599207BE9A100B0CE47 /* Assets.xcassets */,
-				1960059B207BE9A100B0CE47 /* LaunchScreen.storyboard */,
 				1960059E207BE9A100B0CE47 /* Info.plist */,
+				1960059B207BE9A100B0CE47 /* LaunchScreen.storyboard */,
+				19600596207BE9A100B0CE47 /* Main.storyboard */,
+				19600594207BE9A100B0CE47 /* ViewController.swift */,
 			);
 			path = TreningGenerator;
 			sourceTree = "<group>";
@@ -100,6 +110,35 @@
 				196005A9207BE9A100B0CE47 /* Info.plist */,
 			);
 			path = TreningGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		EF631486207C0EC700FD1245 /* _AbstractTypes */ = {
+			isa = PBXGroup;
+			children = (
+				EF63148D207D21D000FD1245 /* ExerciseLevel.swift */,
+				EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */,
+			);
+			path = _AbstractTypes;
+			sourceTree = "<group>";
+		};
+		EF631489207C0F9800FD1245 /* _Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF63148A207C0FC300FD1245 /* _Exercises */,
+				EF631491207D2ABF00FD1245 /* ExercisesModel.swift */,
+			);
+			path = _Model;
+			sourceTree = "<group>";
+		};
+		EF63148A207C0FC300FD1245 /* _Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				EF63148B207C0FDE00FD1245 /* AbsExercises.swift */,
+				EF631495207D2EA400FD1245 /* BackBicepsExercises.swift */,
+				EF631493207D2BA200FD1245 /* ChestTricepsShouldersExercises.swift */,
+				EF631497207D2FB800FD1245 /* LegsExercises.swift */,
+			);
+			path = _Exercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +186,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = SZK;
 				TargetAttributes = {
 					1960058E207BE9A100B0CE47 = {
@@ -205,9 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				196005B5207BE9E300B0CE47 /* Exercises.swift in Sources */,
+				EF631498207D2FB800FD1245 /* LegsExercises.swift in Sources */,
+				EF631492207D2ABF00FD1245 /* ExercisesModel.swift in Sources */,
 				19600595207BE9A100B0CE47 /* ViewController.swift in Sources */,
-				196005B7207BEA1700B0CE47 /* ExercisesEnums.swift in Sources */,
+				EF63148E207D21D000FD1245 /* ExerciseLevel.swift in Sources */,
+				EF631496207D2EA400FD1245 /* BackBicepsExercises.swift in Sources */,
+				EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */,
+				EF63148C207C0FDE00FD1245 /* AbsExercises.swift in Sources */,
+				EF631494207D2BA200FD1245 /* ChestTricepsShouldersExercises.swift in Sources */,
 				19600593207BE9A100B0CE47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +308,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -271,6 +316,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -321,6 +367,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -328,6 +375,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
