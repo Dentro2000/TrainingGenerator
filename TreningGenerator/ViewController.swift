@@ -3,26 +3,30 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    let exercises = ExercisesModel()
+
+    let workout = ExercisesModel().workoutPlan
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercises.workoutPlan.count
+        return workout.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exCell", for: indexPath) as! TableViewCell
-        
-        let workout = exercises.workoutPlan
+      
         let output = workout.map({
             exercise in
             return exercise.name
         })
+        
         for exercise in output {
             cell.exLabel?.text = exercise
         }
         return cell
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
    
     
 }
