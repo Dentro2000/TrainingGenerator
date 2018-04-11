@@ -22,16 +22,8 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
+    override func tableView(_ tableView:    UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-   
-    
 }
-//@IBAction func generateTraining() {
-//    let arrayOfLables = [ex1,ex2, ex3, ex4, ex5, ex6, ex7, ex8].compactMap{ $0 }
-//
-//    zip(arrayOfLables, exercises.workoutPlan).forEach { (arg) in
-//        let (label, exercise) = arg
-//        label.text = exercise.name
-//    }}
+
