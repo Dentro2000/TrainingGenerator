@@ -17,9 +17,9 @@ class ViewController: UITableViewController {
             exercise in
             return exercise.name
         })
-        
-        cell.exLabel?.text = output[1]
-        
+        for exercise in output {
+            cell.exLabel?.text = exercise
+        }
         return cell
     }
     
