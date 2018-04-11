@@ -12,11 +12,13 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exCell", for: indexPath) as! TableViewCell
         
-        let workout = exercises.workoutPlan as! [String]
-        for exercise in workout {
-            cell.exLabel?.text = exercise
-        }
+        let workout = exercises.workoutPlan
+        let output = workout.map({
+            exercise in
+            return exercise.name
+        })
         
+        cell.exLabel?.text = output[1]
         
         return cell
     }
