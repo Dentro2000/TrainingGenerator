@@ -58,5 +58,14 @@ struct ExercisesModel {
         
         return takeRandom(abs) + takeRandom(chestTricepsShoulders) + takeRandom(backBiceps) + takeRandom(legs)
     }
+    
+    func workoutPlanHelperMethod () -> [String] {
+        let output = workoutPlan.map{
+            exercise in
+            return exercise.name
+        }
+        return output
+    }
+
 }
 

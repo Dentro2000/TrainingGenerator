@@ -3,22 +3,28 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-
-    let workout = ExercisesModel().workoutPlan
-   
+    var workout = ExercisesModel().workoutPlanHelperMethod()
+    
+    func generateTrainig(){
+        let newWorkout = ExercisesModel().workoutPlanHelperMethod()
+        workout = newWorkout
+    }
+    
+    @IBAction func generate(){
+        generateTrainig()
+        tableView.reloadData()
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return workout.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exCell", for: indexPath) as! TableViewCell
-      
-        let output = workout.map({
-            exercise in
-            return exercise.name
-        })
         
-        cell.exLabel?.text = output[indexPath.row]
+        
+        cell.exLabel?.text = workout[indexPath.row]
         return cell
     }
     
