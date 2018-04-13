@@ -48,24 +48,5 @@ struct ExercisesModel {
             return c(abs) + c(chestTricepsShoulders) + c(backBiceps) + c(legs)
         }
     }
-    
-    
-    var workoutPlan: [ExerciseProtocol] {
-        func takeRandom(_ inArray: Array<Any>) -> [ExerciseProtocol] {
-            let array = (inArray as NSArray).shuffled().prefix(2)
-            return Array(array) as! [ExerciseProtocol]
-        }
-        
-        return takeRandom(abs) + takeRandom(chestTricepsShoulders) + takeRandom(backBiceps) + takeRandom(legs)
-    }
-    
-    func workoutPlanHelperMethod () -> [String] {
-        let output = workoutPlan.map{
-            exercise in
-            return exercise.name
-        }
-        return output
-    }
-
 }
 

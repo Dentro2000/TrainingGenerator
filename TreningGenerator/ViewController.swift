@@ -1,17 +1,40 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
-    
-    var workout = ExercisesModel().workoutPlanHelperMethod()
-    
-    func generateTrainig(){
-        let newWorkout = ExercisesModel().workoutPlanHelperMethod()
-        workout = newWorkout
+struct TraningGenerator {
+    let exeModel: ExercisesModel
+
+
+    var workoutPlan: [String] {
+        func takeRandom(_ inArray: Array<Any>) -> [ExerciseProtocol] {
+            let array = (inArray as NSArray).shuffled().prefix(2)
+            return Array(array) as! [ExerciseProtocol]
+        }
+
+        let workout = takeRandom(exeModel.abs) + takeRandom(exeModel.chestTricepsShoulders) + takeRandom(exeModel.backBiceps) + takeRandom(exeModel.legs)
+
+        return workout.map {$0.name}
     }
-    
+
+}
+
+class ViewController: UITableViewController {
+
+    lazy var traningGenerator = {
+        return TraningGenerator(exeModel: model)
+    }()
+
+    var model   = ExercisesModel()
+    lazy var workout: [String] = {
+        return generateTrainig()
+    }()
+
+    func generateTrainig() -> [String] {
+        return traningGenerator.workoutPlan
+    }
+
     @IBAction func generate(){
-        generateTrainig()
+        workout = generateTrainig()
         tableView.reloadData()
     }
     

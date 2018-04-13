@@ -77,10 +77,9 @@
 		19600586207BE9A100B0CE47 = {
 			isa = PBXGroup;
 			children = (
-				19AF64BE207EA59000380773 /* TableViewCell.swift */,
+				19600590207BE9A100B0CE47 /* Products */,
 				19600591207BE9A100B0CE47 /* TreningGenerator */,
 				196005A6207BE9A100B0CE47 /* TreningGeneratorUITests */,
-				19600590207BE9A100B0CE47 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +95,7 @@
 		19600591207BE9A100B0CE47 /* TreningGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				BA8ADA952080855100C8AA64 /* _UI */,
 				EF631486207C0EC700FD1245 /* _AbstractTypes */,
 				EF631489207C0F9800FD1245 /* _Model */,
 				19600592207BE9A100B0CE47 /* AppDelegate.swift */,
@@ -115,6 +115,14 @@
 				196005A9207BE9A100B0CE47 /* Info.plist */,
 			);
 			path = TreningGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		BA8ADA952080855100C8AA64 /* _UI */ = {
+			isa = PBXGroup;
+			children = (
+				19AF64BE207EA59000380773 /* TableViewCell.swift */,
+			);
+			path = _UI;
 			sourceTree = "<group>";
 		};
 		EF631486207C0EC700FD1245 /* _AbstractTypes */ = {
