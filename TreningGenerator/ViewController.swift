@@ -10,6 +10,7 @@ struct TraningGenerator {
 
             let header: String
             let exes: [String]
+            let kind: ExerciseKind
         }
 
         let sets: [TraningGenerator.WorkautPlan.Set]
@@ -23,8 +24,10 @@ struct TraningGenerator {
         }
 
         return WorkautPlan(sets: [
-            TraningGenerator.WorkautPlan.Set(header: "AbsExercises",    exes: takeRandom(exeModel.abs)),
-            TraningGenerator.WorkautPlan.Set(header: "Back and Biceps", exes: takeRandom(exeModel.backBiceps))
+            TraningGenerator.WorkautPlan.Set(header: "AbsExercises",    exes: takeRandom(exeModel.abs), kind: .calisthenics),
+            TraningGenerator.WorkautPlan.Set(header: "Back and Biceps", exes: takeRandom(exeModel.backBiceps), kind: .calisthenics),
+            TraningGenerator.WorkautPlan.Set(header: "Chest, triceps and shuolders", exes: takeRandom(exeModel.chestTricepsShoulders), kind: .calisthenics),
+            TraningGenerator.WorkautPlan.Set(header: "Legs", exes: takeRandom(exeModel.legs), kind: .calisthenics)
             ])
     }
 }

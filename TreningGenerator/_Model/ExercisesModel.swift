@@ -5,37 +5,37 @@ import GameplayKit
 struct ExercisesModel {
     
     let abs: [AbsExerciseProtocol] = [
-            AbsExercise(name: "Spięcia brzucha w leżeniu",              level: .simple),
-            AbsExercise(name: "Mountain Climbers (Bieg w podporze)",    level: .simple),
-            AbsExercise(name: "Plank",                                  level: .simple),
-            AbsExercise(name: "Skręty tułowia z unoszeniem nóg",        level: .simple),
+        AbsExercise(name: "Spięcia brzucha w leżeniu",              level: .simple, kind: .calisthenics),
+        AbsExercise(name: "Mountain Climbers (Bieg w podporze)",    level: .simple, kind: .calisthenics),
+        AbsExercise(name: "Plank",                                  level: .simple, kind: .calisthenics),
+        AbsExercise(name: "Skręty tułowia z unoszeniem nóg",        level: .simple, kind:. calisthenics),
             
-            AbsExercise(name: "Hard Abs 1", level: .hard)
+        AbsExercise(name: "Hard Abs 1", level: .hard, kind: .calisthenics)
         ]
     
     
     let chestTricepsShoulders: [ChestTricepsShouldersExercisesProtocol] = [
-            ChestTricepsShouldersExercises(name: "Pompki Klasyczne", level: .simple),
-            ChestTricepsShouldersExercises(name: "Popmpki Szerokie", level: .simple),
-            ChestTricepsShouldersExercises(name: "Pike push-up", level: .simple),
-            ChestTricepsShouldersExercises(name: "Dipy na krześle", level: .simple)
+        ChestTricepsShouldersExercises(name: "Pompki Klasyczne", level: .simple, kind: .calisthenics),
+        ChestTricepsShouldersExercises(name: "Popmpki Szerokie", level: .simple, kind: .calisthenics),
+            ChestTricepsShouldersExercises(name: "Pike push-up", level: .simple, kind: .calisthenics),
+            ChestTricepsShouldersExercises(name: "Dipy na krześle", level: .simple, kind: .calisthenics)
         ]
     
     
     let backBiceps: [BackBicepsExercisesProtocol] =  [
-            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu podchwyt",           level: .simple),
-            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu szeroki nachwyt",    level: .simple),
-            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu wąski nachwyt",      level: .simple),
+            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu podchwyt",           level: .simple, kind: .calisthenics),
+            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu szeroki nachwyt",    level: .simple, kind: .calisthenics),
+            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu wąski nachwyt",      level: .simple, kind: .calisthenics),
             
-            BackBicepsExercises(name: "Superman",   level: .simple)
+            BackBicepsExercises(name: "Superman",   level: .simple, kind: .calisthenics)
         ]
     
     
     let legs: [LegsExercisesProtocol] = [
-            LegsExercises(name: "Przysiad / Głęboki przysiad",              level: .simple),
-            LegsExercises(name: "Wykroki",                                  level: .simple),
-            LegsExercises(name: "Unoszenie bioder w leżeniu na plecach",    level: .simple),
-            LegsExercises(name: "Wspięcia na palce jednej nogi",            level: .simple)
+            LegsExercises(name: "Przysiad / Głęboki przysiad",              level: .simple, kind: .calisthenics),
+            LegsExercises(name: "Wykroki",                                  level: .simple, kind: .calisthenics),
+            LegsExercises(name: "Unoszenie bioder w leżeniu na plecach",    level: .simple, kind: .calisthenics),
+            LegsExercises(name: "Wspięcia na palce jednej nogi",            level: .simple, kind: .calisthenics)
         ]
     
     
