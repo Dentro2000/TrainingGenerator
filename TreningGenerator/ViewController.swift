@@ -17,15 +17,14 @@ struct TraningGenerator {
     }
 
     var workoutPlan: WorkautPlan {
-        func takeRandom(_ inArray: Array<Any>) -> ([String], [ExerciseKind]) {
+        func takeRandom(_ inArray: Array<Any>) -> [String], [ExerciseKind] {
             let array = (inArray as NSArray).shuffled().prefix(2)
             let exe = Array(array) as! [ExerciseProtocol]
-            return exe.map { $0.name, $0.kind }
-         // żeby zwracało name i kind
+            return zip(exe.map { $0.name}, exe.map{$0.kind})
+         
         }
 
-        return WorkautPlan(sets: [                                                  //tutaj łapać osobno to co z funkcji wyplułem exes: takeRandom(exeModel.abs.name)
-                                                                                    // kind: takeRandom(exeModel.abs.kind
+        return WorkautPlan(sets: [                                                                            
             TraningGenerator.WorkautPlan.Set(header: "AbsExercises",    exes: takeRandom(exeModel.abs), kind: .calisthenics),
             TraningGenerator.WorkautPlan.Set(header: "Back and Biceps", exes: takeRandom(exeModel.backBiceps), kind: .calisthenics),
             TraningGenerator.WorkautPlan.Set(header: "Chest, triceps and shuolders", exes: takeRandom(exeModel.chestTricepsShoulders), kind: .calisthenics),
