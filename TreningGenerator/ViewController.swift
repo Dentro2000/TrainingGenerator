@@ -17,10 +17,10 @@ struct TraningGenerator {
     }
 
     var workoutPlan: WorkautPlan {
-        func takeRandom(_ inArray: Array<Any>) -> [String], [ExerciseKind] {
+        func takeRandom(_ inArray: Array<Any>) -> [String] {
             let array = (inArray as NSArray).shuffled().prefix(2)
             let exe = Array(array) as! [ExerciseProtocol]
-            return zip(exe.map { $0.name}, exe.map{$0.kind})
+            return exe.map { $0.name }
          
         }
 
