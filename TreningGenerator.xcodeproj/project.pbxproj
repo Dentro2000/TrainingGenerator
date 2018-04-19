@@ -14,6 +14,7 @@
 		1960059D207BE9A100B0CE47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1960059B207BE9A100B0CE47 /* LaunchScreen.storyboard */; };
 		196005A8207BE9A100B0CE47 /* TreningGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196005A7207BE9A100B0CE47 /* TreningGeneratorUITests.swift */; };
 		19AF64BF207EA59000380773 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF64BE207EA59000380773 /* TableViewCell.swift */; };
+		BADFE41E20887B2D0087E0C5 /* TraningGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADFE41D20887B2D0087E0C5 /* TraningGenerator.swift */; };
 		EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */; };
 		EF63148C207C0FDE00FD1245 /* AbsExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63148B207C0FDE00FD1245 /* AbsExercises.swift */; };
 		EF63148E207D21D000FD1245 /* ExerciseLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF63148D207D21D000FD1245 /* ExerciseLevel.swift */; };
@@ -46,6 +47,7 @@
 		196005A7207BE9A100B0CE47 /* TreningGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreningGeneratorUITests.swift; sourceTree = "<group>"; };
 		196005A9207BE9A100B0CE47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19AF64BE207EA59000380773 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		BADFE41D20887B2D0087E0C5 /* TraningGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraningGenerator.swift; sourceTree = "<group>"; };
 		EF631487207C0EFE00FD1245 /* ExerciseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseProtocol.swift; sourceTree = "<group>"; };
 		EF63148B207C0FDE00FD1245 /* AbsExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsExercises.swift; sourceTree = "<group>"; };
 		EF63148D207D21D000FD1245 /* ExerciseLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseLevel.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				EF63148A207C0FC300FD1245 /* _Exercises */,
 				EF631491207D2ABF00FD1245 /* ExercisesModel.swift */,
+				BADFE41D20887B2D0087E0C5 /* TraningGenerator.swift */,
 			);
 			path = _Model;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				EF631498207D2FB800FD1245 /* LegsExercises.swift in Sources */,
 				EF631492207D2ABF00FD1245 /* ExercisesModel.swift in Sources */,
 				19600595207BE9A100B0CE47 /* ViewController.swift in Sources */,
+				BADFE41E20887B2D0087E0C5 /* TraningGenerator.swift in Sources */,
 				EF63148E207D21D000FD1245 /* ExerciseLevel.swift in Sources */,
 				EF631496207D2EA400FD1245 /* BackBicepsExercises.swift in Sources */,
 				EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */,

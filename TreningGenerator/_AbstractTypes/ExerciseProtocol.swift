@@ -1,7 +1,7 @@
 
 import Foundation
 
-enum ExerciseKind: Int {
+enum ExerciseKind: String {
     case calisthenics
     case streching
 }

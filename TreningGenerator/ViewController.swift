@@ -1,39 +1,6 @@
 
 import UIKit
 
-struct TraningGenerator {
-    let exeModel: ExercisesModel
-
-    struct WorkautPlan {
-
-        struct Set {
-
-            let header: String
-            let exes: [String]
-            let kind: ExerciseKind
-        }
-
-        let sets: [TraningGenerator.WorkautPlan.Set]
-    }
-
-    var workoutPlan: WorkautPlan {
-        func takeRandom(_ inArray: Array<Any>) -> [String] {
-            let array = (inArray as NSArray).shuffled().prefix(2)
-            let exe = Array(array) as! [ExerciseProtocol]
-            return exe.map { $0.name }
-         
-        }
-
-        return WorkautPlan(sets: [                                                                            
-            TraningGenerator.WorkautPlan.Set(header: "AbsExercises",    exes: takeRandom(exeModel.abs), kind: .calisthenics),
-            TraningGenerator.WorkautPlan.Set(header: "Back and Biceps", exes: takeRandom(exeModel.backBiceps), kind: .calisthenics),
-            TraningGenerator.WorkautPlan.Set(header: "Chest, triceps and shuolders", exes: takeRandom(exeModel.chestTricepsShoulders), kind: .calisthenics),
-            TraningGenerator.WorkautPlan.Set(header: "Legs", exes: takeRandom(exeModel.legs), kind: .calisthenics)
-            ])
-    }
-}
-
-
 class ViewController: UITableViewController {
 
     lazy var traningGenerator = {
@@ -46,7 +13,7 @@ class ViewController: UITableViewController {
     }()
 
     func generateTrainig() -> TraningGenerator.WorkautPlan {
-        return traningGenerator.workoutPlan
+        return traningGenerator.workoutPlan(kind: .calisthenics)
     }
 
     @IBAction func generate(){
@@ -76,9 +43,4 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView:    UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
 }
-
