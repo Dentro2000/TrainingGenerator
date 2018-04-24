@@ -17,7 +17,7 @@ class ViewController: UITableViewController, FilterViewControllerDelegate {
     }()
 
     func generateTrainig() -> TraningGenerator.WorkautPlan {
-        return traningGenerator.workoutPlan(kind: .streching)
+        return traningGenerator.workoutPlan(kind: .calisthenics)
     }
 
     @IBAction func generate(){

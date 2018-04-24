@@ -30,14 +30,17 @@ class FilterViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if kind[indexPath.row] == ExerciseKind.calisthenics.rawValue {
+        switch kind[indexPath.row] {
+        case ExerciseKind.calisthenics.rawValue:
             delegate?.setKindOfExercies(.calisthenics)
             navigationController?.popViewController(animated: true)
             tableView.deselectRow(at: indexPath, animated: true)
-        } else if kind[indexPath.row] == ExerciseKind.streching.rawValue {
+        case ExerciseKind.streching.rawValue:
             delegate?.setKindOfExercies(.streching)
             navigationController?.popViewController(animated: true)
             tableView.deselectRow(at: indexPath, animated: true)
+        default:
+            navigationController?.popViewController(animated: true)
         }
     }
 }
