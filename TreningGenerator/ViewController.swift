@@ -53,7 +53,6 @@ class ViewController: UITableViewController, FilterViewControllerDelegate {
             let destinantion = segue.destination as! FilterViewController
             destinantion.delegate = self
         
-            
         }
     }
 }
