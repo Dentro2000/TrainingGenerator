@@ -8,7 +8,7 @@ protocol FilterViewControllerDelegate: class {
 class FilterViewController: UITableViewController {
     
     weak var delegate: FilterViewControllerDelegate?
-    let kind = ["calisthenics", "stretching"]
+    let kind = ["Calisthenics", "Stretching"]
    
     
     override func viewDidLoad() {
@@ -37,8 +37,5 @@ class FilterViewController: UITableViewController {
             delegate?.setKindOfExercies(.streching)
             navigationController?.popViewController(animated: true)
         }
-        
     }
-        
-    
 }

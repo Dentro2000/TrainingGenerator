@@ -36,7 +36,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="exLabel" destination="w8U-kI-CNn" id="k79-Zw-3t1"/>
-                                    <segue destination="fz7-LA-xC1" kind="show" identifier="filterViewSegue" id="C4m-Eu-bIe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -46,6 +45,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Sia-aD-Wx1">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="x41-aK-MNJ">
+                            <connections>
+                                <segue destination="fz7-LA-xC1" kind="show" identifier="filterViewSegue" id="fVr-IS-Vim"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="GenerateTraining" id="r12-d9-OCH">
                             <connections>
                                 <action selector="generate" destination="i0F-ig-6FE" id="lZ1-Tz-SeD"/>

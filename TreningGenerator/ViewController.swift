@@ -3,8 +3,6 @@ import UIKit
 
 class ViewController: UITableViewController, FilterViewControllerDelegate {
     
-    
-    
     override func viewDidLoad() {
         tableView.tableFooterView = UIView()
     }
@@ -62,8 +60,7 @@ class ViewController: UITableViewController, FilterViewControllerDelegate {
 
 extension ViewController {
     func setKindOfExercies(_ kindOf: ExerciseKind) {
-        traningGenerator.workoutPlan(kind: kindOf)
+        workout = traningGenerator.workoutPlan(kind: kindOf)
         tableView.reloadData()
     }
-    
 }
