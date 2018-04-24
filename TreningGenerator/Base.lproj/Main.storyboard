@@ -73,7 +73,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="kindOfLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umW-vR-NK1">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umW-vR-NK1">
                                             <rect key="frame" x="16" y="0.0" width="260" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -81,10 +81,10 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <connections>
-                                        <outlet property="kindOfLabel" destination="umW-vR-NK1" id="KfP-1R-DiE"/>
-                                    </connections>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="kindOfLabel" destination="umW-vR-NK1" id="oen-cF-6YT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

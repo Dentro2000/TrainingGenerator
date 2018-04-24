@@ -1,7 +1,9 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, FilterViewControllerDelegate {
+    
+    
     
     override func viewDidLoad() {
         tableView.tableFooterView = UIView()
@@ -17,7 +19,7 @@ class ViewController: UITableViewController {
     }()
 
     func generateTrainig() -> TraningGenerator.WorkautPlan {
-        return traningGenerator.workoutPlan(kind: .calisthenics)
+        return traningGenerator.workoutPlan(kind: .streching)
     }
 
     @IBAction func generate(){
@@ -51,8 +53,17 @@ class ViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "filterViewSegue" {
             let destinantion = segue.destination as! FilterViewController
-            
+            destinantion.delegate = self
         
+            
         }
     }
+}
+
+extension ViewController {
+    func setKindOfExercies(_ kindOf: ExerciseKind) {
+        traningGenerator.workoutPlan(kind: kindOf)
+        tableView.reloadData()
+    }
+    
 }

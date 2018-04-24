@@ -10,7 +10,7 @@ struct ExercisesModel {
         AbsExercise(name: "Plank",                                  level: .simple, kind: [.calisthenics]),
         AbsExercise(name: "Skręty tułowia z unoszeniem nóg",        level: .simple, kind: [.calisthenics]),
             
-        AbsExercise(name: "Hard Abs 1", level: .hard, kind: [.calisthenics, .streching])
+        AbsExercise(name: "Hard Abs 1", level: .hard, kind: [.streching])
         ]
     
     
