@@ -1,7 +1,7 @@
 import UIKit
 
 class FilterViewController: UITableViewController {
-
+    
     
     override func viewDidLoad() {
         tableView.tableFooterView = UIView()
@@ -17,7 +17,7 @@ class FilterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kindOfCell", for: indexPath) as! FilterCell
-
+         
           return cell
     }
 }

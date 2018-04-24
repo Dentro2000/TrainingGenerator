@@ -52,7 +52,7 @@ class ViewController: UITableViewController {
         if segue.identifier == "filterViewSegue" {
             let destinantion = segue.destination as! FilterViewController
             
-            
+        
         }
     }
 }
