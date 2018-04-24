@@ -4,6 +4,7 @@ import Foundation
 enum ExerciseKind: String {
     case calisthenics
     case streching
+    case weightLifting
 }
 
 protocol ExerciseProtocol {

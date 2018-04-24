@@ -8,15 +8,10 @@ protocol FilterViewControllerDelegate: class {
 class FilterViewController: UITableViewController {
     
     weak var delegate: FilterViewControllerDelegate?
-    let kind: [String] = [ExerciseKind.calisthenics.rawValue, ExerciseKind.streching.rawValue]
+    let kind: [ExerciseKind] = [ExerciseKind.calisthenics, ExerciseKind.streching, ExerciseKind.weightLifting]
    
-    
     override func viewDidLoad() {
         tableView.tableFooterView = UIView()
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-       return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,22 +20,24 @@ class FilterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kindOfCell", for: indexPath) as! FilterCell
-            cell.kindOfLabel?.text = kind[indexPath.row]
+            cell.kindOfLabel?.text = kind[indexPath.row].rawValue
           return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch kind[indexPath.row] {
-        case ExerciseKind.calisthenics.rawValue:
+        case ExerciseKind.calisthenics:
             delegate?.setKindOfExercies(.calisthenics)
             navigationController?.popViewController(animated: true)
             tableView.deselectRow(at: indexPath, animated: true)
-        case ExerciseKind.streching.rawValue:
+        case ExerciseKind.streching:
             delegate?.setKindOfExercies(.streching)
             navigationController?.popViewController(animated: true)
             tableView.deselectRow(at: indexPath, animated: true)
-        default:
+        case ExerciseKind.weightLifting:
+            delegate?.setKindOfExercies(.weightLifting)
             navigationController?.popViewController(animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 }

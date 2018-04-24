@@ -4,6 +4,7 @@ import UIKit
 class ViewController: UITableViewController, FilterViewControllerDelegate {
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.tableFooterView = UIView()
     }
 

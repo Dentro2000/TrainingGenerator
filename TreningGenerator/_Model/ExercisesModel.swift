@@ -18,7 +18,8 @@ struct ExercisesModel {
         ChestTricepsShouldersExercises(name: "Pompki Klasyczne", level: .simple, kind: [.calisthenics]),
         ChestTricepsShouldersExercises(name: "Popmpki Szerokie", level: .simple, kind: [.calisthenics]),
             ChestTricepsShouldersExercises(name: "Pike push-up", level: .simple, kind: [.calisthenics]),
-            ChestTricepsShouldersExercises(name: "Dipy na krześle", level: .simple, kind: [.calisthenics])
+            ChestTricepsShouldersExercises(name: "Dipy na krześle", level: .simple, kind: [.calisthenics]),
+            ChestTricepsShouldersExercises(name: "Wyciskanie Sztangi", level: .simple, kind: [.weightLifting])
         ]
     
     
@@ -30,7 +31,8 @@ struct ExercisesModel {
             BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu wąski nachwyt",
                                 level: .simple, kind: [.calisthenics]),
             
-            BackBicepsExercises(name: "Superman",   level: .simple, kind: [.calisthenics])
+            BackBicepsExercises(name: "Superman",   level: .simple, kind: [.calisthenics]),
+            BackBicepsExercises(name: "Martwy ciąg",   level: .simple, kind: [.weightLifting])
         ]
     
     
@@ -38,7 +40,8 @@ struct ExercisesModel {
             LegsExercises(name: "Przysiad / Głęboki przysiad",              level: .simple, kind: [.calisthenics]),
             LegsExercises(name: "Wykroki",                                  level: .simple, kind: [.calisthenics]),
             LegsExercises(name: "Unoszenie bioder w leżeniu na plecach",    level: .simple, kind: [.calisthenics]),
-            LegsExercises(name: "Wspięcia na palce jednej nogi",            level: .simple, kind: [.calisthenics])
+            LegsExercises(name: "Wspięcia na palce jednej nogi",            level: .simple, kind: [.calisthenics]),
+            LegsExercises(name: "Przysiad ze sztangą na barkach",            level: .simple, kind: [.weightLifting]),
         ]
     
     
