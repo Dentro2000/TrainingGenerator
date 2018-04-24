@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191B5474208FA55000D5C030 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B5473208FA55000D5C030 /* FilterViewController.swift */; };
+		191B5476208FAA4500D5C030 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191B5475208FAA4500D5C030 /* FilterCell.swift */; };
 		19600593207BE9A100B0CE47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19600592207BE9A100B0CE47 /* AppDelegate.swift */; };
 		19600595207BE9A100B0CE47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19600594207BE9A100B0CE47 /* ViewController.swift */; };
 		19600598207BE9A100B0CE47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19600596207BE9A100B0CE47 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191B5473208FA55000D5C030 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		191B5475208FAA4500D5C030 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		1960058F207BE9A100B0CE47 /* TreningGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreningGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19600592207BE9A100B0CE47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19600594207BE9A100B0CE47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				1960059B207BE9A100B0CE47 /* LaunchScreen.storyboard */,
 				19600596207BE9A100B0CE47 /* Main.storyboard */,
 				19600594207BE9A100B0CE47 /* ViewController.swift */,
+				191B5473208FA55000D5C030 /* FilterViewController.swift */,
 			);
 			path = TreningGenerator;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				19AF64BE207EA59000380773 /* TableViewCell.swift */,
+				191B5475208FAA4500D5C030 /* FilterCell.swift */,
 			);
 			path = _UI;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 				EF63148E207D21D000FD1245 /* ExerciseLevel.swift in Sources */,
 				EF631496207D2EA400FD1245 /* BackBicepsExercises.swift in Sources */,
 				EF631488207C0EFE00FD1245 /* ExerciseProtocol.swift in Sources */,
+				191B5476208FAA4500D5C030 /* FilterCell.swift in Sources */,
+				191B5474208FA55000D5C030 /* FilterViewController.swift in Sources */,
 				19AF64BF207EA59000380773 /* TableViewCell.swift in Sources */,
 				EF631490207D29FB00FD1245 /* ExerciseGroupProtocol.swift in Sources */,
 				EF63148C207C0FDE00FD1245 /* AbsExercises.swift in Sources */,

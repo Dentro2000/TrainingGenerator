@@ -2,6 +2,10 @@
 import UIKit
 
 class ViewController: UITableViewController {
+    
+    override func viewDidLoad() {
+        tableView.tableFooterView = UIView()
+    }
 
     lazy var traningGenerator = {
         return TraningGenerator(exeModel: model)
@@ -42,5 +46,13 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView:    UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "filterViewSegue" {
+            let destinantion = segue.destination as! FilterViewController
+            
+            
+        }
     }
 }
