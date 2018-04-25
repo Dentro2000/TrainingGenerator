@@ -25,19 +25,8 @@ class FilterViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch kind[indexPath.row] {
-        case ExerciseKind.calisthenics:
-            delegate?.setKindOfExercies(.calisthenics)
-            navigationController?.popViewController(animated: true)
-            tableView.deselectRow(at: indexPath, animated: true)
-        case ExerciseKind.streching:
-            delegate?.setKindOfExercies(.streching)
-            navigationController?.popViewController(animated: true)
-            tableView.deselectRow(at: indexPath, animated: true)
-        case ExerciseKind.weightLifting:
-            delegate?.setKindOfExercies(.weightLifting)
-            navigationController?.popViewController(animated: true)
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        delegate?.setKindOfExercies(kind[indexPath.row])
+        navigationController?.popViewController(animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
