@@ -14,11 +14,11 @@ struct TraningGenerator {
         let sets: [TraningGenerator.WorkautPlan.Set]
     }
 
-    func workoutPlan(kind: ExerciseKind?) -> WorkautPlan {
+    func workoutPlan(filter: Set<ExerciseKind>) -> WorkautPlan {
+
         func takeRandom(_ inArray: [ExerciseProtocol]) -> [String] {
             let filtered = inArray.filter {
-                guard let kind = kind else { return true }
-                return $0.kind.contains(kind)
+                return $0.kind.isSubset(of: filter)
             }
             let array = (filtered as NSArray).shuffled().prefix(2)
             let exe = Array(array) as! [ExerciseProtocol]
