@@ -1,6 +1,13 @@
 
 import Foundation
 
+extension Array {
+    func takeRandom(_ count: Int = 2) -> Array<Element> {
+        let shuffled = ((self as NSArray).shuffled()) as! Array<Element>
+        return Array(shuffled.prefix(count))
+    }
+}
+
 struct TraningGenerator {
     let exeModel: ExercisesModel
 
@@ -18,12 +25,10 @@ struct TraningGenerator {
 
         func takeRandom(_ inArray: [ExerciseProtocol]) -> [String] {
             let filtered = inArray.filter {
-                return $0.kind.isSubset(of: filter)
+                 return $0.kind.isDisjoint(with: filter) == false
             }
-            let array = (filtered as NSArray).shuffled().prefix(2)
-            let exe = Array(array) as! [ExerciseProtocol]
-            return exe.map { $0.name }
-
+            let array = filtered.takeRandom()
+            return array.map { $0.name }
         }
 
         return WorkautPlan(sets: [
