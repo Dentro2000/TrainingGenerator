@@ -18,7 +18,7 @@ class ViewController: UITableViewController, FilterViewControllerDelegate {
     }()
 
     func generateTrainig() -> TraningGenerator.WorkautPlan {
-        return traningGenerator.workoutPlan(filter: [.calisthenics])
+        return traningGenerator.workoutPlan(filter: [.calisthenics, .streching, .weightLifting])
     }
 
     @IBAction func generate(){
@@ -59,8 +59,10 @@ class ViewController: UITableViewController, FilterViewControllerDelegate {
 }
 
 extension ViewController {
-    func setKindOfExercies(_ kindOf: ExerciseKind) {
-        workout = traningGenerator.workoutPlan(filter: [kindOf])
+    func setKindOfExercies(_ kindOf:Set<ExerciseKind>) {
+        
+        
+        workout = traningGenerator.workoutPlan(filter: kindOf)
         tableView.reloadData()
     }
 }

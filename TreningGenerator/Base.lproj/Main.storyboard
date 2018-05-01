@@ -97,7 +97,13 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="PN6-yi-WII"/>
+                    <navigationItem key="navigationItem" title="Title" id="PN6-yi-WII">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="3CY-ru-2Fj">
+                            <connections>
+                                <action selector="done" destination="fz7-LA-xC1" id="m9d-ev-3jD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zu0-ic-dG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
