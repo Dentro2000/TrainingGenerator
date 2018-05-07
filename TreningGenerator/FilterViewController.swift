@@ -9,11 +9,11 @@ class FilterViewController: UITableViewController {
     
     weak var delegate: FilterViewControllerDelegate?
     let kind: [ExerciseKind] = [ExerciseKind.calisthenics, ExerciseKind.streching, ExerciseKind.weightLifting]
-    var arrayOfChoosenExercies = Set<ExerciseKind>()
+    var arrayOfChosenExercies = Set<ExerciseKind>()
     
     @IBAction func done() {
     navigationController?.popViewController(animated: true)
-    delegate?.setKindOfExercies(arrayOfChoosenExercies)
+    delegate?.setKindOfExercies(arrayOfChosenExercies)
     }
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class FilterViewController: UITableViewController {
     }
     
     func addElementToSet(_ kind: ExerciseKind){
-        arrayOfChoosenExercies.insert(kind)
+        arrayOfChosenExercies.insert(kind)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
