@@ -31,9 +31,8 @@ class FilterViewController: UITableViewController {
     
     }
     
-    func addElementToSet(_ kind: ExerciseKind) -> Set<ExerciseKind> {
+    func addElementToSet(_ kind: ExerciseKind){
         arrayOfChoosenExercies.insert(kind)
-        return arrayOfChoosenExercies
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
