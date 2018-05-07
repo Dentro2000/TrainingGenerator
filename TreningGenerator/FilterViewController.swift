@@ -8,16 +8,17 @@ protocol FilterViewControllerDelegate: class {
 class FilterViewController: UITableViewController {
     
     weak var delegate: FilterViewControllerDelegate?
-    let kind: Set<ExerciseKind> = [ExerciseKind.calisthenics, ExerciseKind.streching, ExerciseKind.weightLifting]
+    let kind: [ExerciseKind] = [ExerciseKind.calisthenics, ExerciseKind.streching, ExerciseKind.weightLifting]
+    var arrayOfChoosenExercies = Set<ExerciseKind>()
     @IBAction func done() {
     navigationController?.popViewController(animated: true)
+    
     }
     
     override func viewDidLoad() {
         tableView.tableFooterView = UIView()
         tableView.allowsMultipleSelection = true
     }
-
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return kind.count
@@ -25,19 +26,19 @@ class FilterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kindOfCell", for: indexPath) as! FilterCell
-            let arrayOfSet = Array(kind)
-            cell.kindOfLabel?.text = arrayOfSet[indexPath.row].rawValue
+            cell.kindOfLabel?.text = kind[indexPath.row].rawValue
           return cell
-
     
+    }
+    
+    func addElementToSet(_ kind: ExerciseKind) -> Set<ExerciseKind> {
+        arrayOfChoosenExercies.insert(kind)
+        return arrayOfChoosenExercies
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
-        delegate?.setKindOfExercies([kind[indexPath.row]] )
-        
+        addElementToSet(kind[indexPath.row])
+        delegate?.setKindOfExercies(arrayOfChoosenExercies)
     }
 }
-
-
-

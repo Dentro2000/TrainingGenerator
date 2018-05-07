@@ -60,8 +60,6 @@ class ViewController: UITableViewController, FilterViewControllerDelegate {
 
 extension ViewController {
     func setKindOfExercies(_ kindOf:Set<ExerciseKind>) {
-        
-        
         workout = traningGenerator.workoutPlan(filter: kindOf)
         tableView.reloadData()
     }
