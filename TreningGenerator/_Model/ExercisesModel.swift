@@ -54,4 +54,14 @@ struct ExercisesModel {
             return c(abs) + c(chestTricepsShoulders) + c(backBiceps) + c(legs)
         }
     }
+    
+    
+    public func moveTopList(){
+        let documentDirectory = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        let pListURL = URL(fileURLWithPath: "ExercisesModel", relativeTo: documentDirectory.appendingPathExtension("plist"))
+        let encoder = PropertyListEncoder()
+        let pListData = try! encoder.encode(self)
+        try! pListData.write(to: pListURL)
+    }
+    
 }
