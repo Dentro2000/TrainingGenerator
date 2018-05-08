@@ -6,7 +6,7 @@ enum ExerciseKind: String {
     case streching
     case weightLifting
 
-    var allCases: [ExerciseKind] {
+    static var allCases: [ExerciseKind] {
         return [.calisthenics, .streching, .weightLifting ]
     }
 }

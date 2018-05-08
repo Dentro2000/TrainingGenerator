@@ -8,7 +8,7 @@ protocol FilterViewControllerDelegate: class {
 class FilterViewController: UITableViewController {
     
     weak var delegate: FilterViewControllerDelegate?
-    let kind: [ExerciseKind] = [ExerciseKind.calisthenics, ExerciseKind.streching, ExerciseKind.weightLifting]
+    let kind: [ExerciseKind] = ExerciseKind.allCases
     var arrayOfChosenExercies = Set<ExerciseKind>()
     
     @IBAction func done() {
