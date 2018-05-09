@@ -2,9 +2,9 @@
 import Foundation
 import GameplayKit
 
-struct ExercisesModel {
+struct ExercisesModel: Codable {
     
-    let abs: [AbsExerciseProtocol] = [
+    let abs: [AbsExercise] = [
         AbsExercise(name: "Spięcia brzucha w leżeniu",              level: .simple, kind: [.calisthenics]),
         AbsExercise(name: "Mountain Climbers (Bieg w podporze)",    level: .simple, kind: [.calisthenics]),
         AbsExercise(name: "Plank",                                  level: .simple, kind: [.calisthenics]),
@@ -14,7 +14,7 @@ struct ExercisesModel {
         ]
     
     
-    let chestTricepsShoulders: [ChestTricepsShouldersExercisesProtocol] = [
+    let chestTricepsShoulders: [ChestTricepsShouldersExercises] = [
         ChestTricepsShouldersExercises(name: "Pompki Klasyczne", level: .simple, kind: [.calisthenics]),
         ChestTricepsShouldersExercises(name: "Popmpki Szerokie", level: .simple, kind: [.calisthenics]),
             ChestTricepsShouldersExercises(name: "Pike push-up", level: .simple, kind: [.calisthenics]),
@@ -23,7 +23,7 @@ struct ExercisesModel {
         ]
     
     
-    let backBiceps: [BackBicepsExercisesProtocol] =  [
+    let backBiceps: [BackBicepsExercises] =  [
             BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu podchwyt",
                                 level: .simple, kind: [.calisthenics]),
             BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu szeroki nachwyt",
@@ -36,7 +36,7 @@ struct ExercisesModel {
         ]
     
     
-    let legs: [LegsExercisesProtocol] = [
+    let legs: [LegsExercises] = [
             LegsExercises(name: "Przysiad / Głęboki przysiad",              level: .simple, kind: [.calisthenics]),
             LegsExercises(name: "Wykroki",                                  level: .simple, kind: [.calisthenics]),
             LegsExercises(name: "Unoszenie bioder w leżeniu na plecach",    level: .simple, kind: [.calisthenics]),
@@ -54,11 +54,12 @@ struct ExercisesModel {
             return c(abs) + c(chestTricepsShoulders) + c(backBiceps) + c(legs)
         }
     }
+
     
     
     public func moveTopList(){
         let documentDirectory = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        let pListURL = URL(fileURLWithPath: "ExercisesModel", relativeTo: documentDirectory.appendingPathExtension("plist"))
+        let pListURL = URL(fileURLWithPath: documentDirectory.path + "/ExercisesModel.plist", relativeTo: nil)
         let encoder = PropertyListEncoder()
         let pListData = try! encoder.encode(self)
         try! pListData.write(to: pListURL)

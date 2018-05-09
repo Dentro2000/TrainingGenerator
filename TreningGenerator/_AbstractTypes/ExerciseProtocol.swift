@@ -1,7 +1,7 @@
 
 import Foundation
 
-enum ExerciseKind: String {
+enum ExerciseKind: String, Codable {
     case calisthenics
     case streching
     case weightLifting
@@ -11,7 +11,7 @@ enum ExerciseKind: String {
     }
 }
 
-protocol ExerciseProtocol {
+protocol ExerciseProtocol: Codable {
     var name: String { get }
     var level: ExerciseLevel { get }
     var kind: Set<ExerciseKind> { get }

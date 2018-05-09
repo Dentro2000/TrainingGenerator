@@ -1,9 +1,7 @@
 
 import Foundation
 
-protocol AbsExerciseProtocol: ExerciseProtocol {}
-
-struct AbsExercise: AbsExerciseProtocol {
+struct AbsExercise: ExerciseProtocol {
     let name: String
     let level: ExerciseLevel
     let kind: Set<ExerciseKind>

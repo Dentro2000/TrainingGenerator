@@ -1,9 +1,7 @@
 
 import Foundation
 
-protocol LegsExercisesProtocol: ExerciseProtocol {}
-
-struct LegsExercises: LegsExercisesProtocol {
+struct LegsExercises: ExerciseProtocol {
     
     let name: String
     let level: ExerciseLevel

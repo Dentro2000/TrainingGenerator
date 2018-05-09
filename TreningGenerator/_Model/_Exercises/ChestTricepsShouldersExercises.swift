@@ -1,9 +1,7 @@
 
 import Foundation
 
-protocol ChestTricepsShouldersExercisesProtocol: ExerciseProtocol {}
-
-struct ChestTricepsShouldersExercises: ChestTricepsShouldersExercisesProtocol {
+struct ChestTricepsShouldersExercises: ExerciseProtocol {
     let name: String
     let level: ExerciseLevel
     let kind: Set<ExerciseKind>
