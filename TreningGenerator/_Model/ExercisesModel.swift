@@ -3,46 +3,38 @@ import Foundation
 import GameplayKit
 
 struct ExercisesModel: Codable {
+
+    private init() {
+        abs = []
+        chestTricepsShoulders = []
+        backBiceps = []
+        legs = []
+    }
+
+    static func model() -> ExercisesModel {
+//        let documentDirectory = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+
+        let path = Bundle.main.path(forResource: "ExercisesModel", ofType: "plist")!
+
+        let pListURL = URL(fileURLWithPath: path, relativeTo: nil)
+        let decoder = PropertyListDecoder()
+
+        let data = try! Data(contentsOf: pListURL)
+        let stuff = try! decoder.decode(ExercisesModel.self, from: data)
+
+        return stuff
+    }
     
-    let abs: [AbsExercise] = [
-        AbsExercise(name: "Spięcia brzucha w leżeniu",              level: .simple, kind: [.calisthenics]),
-        AbsExercise(name: "Mountain Climbers (Bieg w podporze)",    level: .simple, kind: [.calisthenics]),
-        AbsExercise(name: "Plank",                                  level: .simple, kind: [.calisthenics]),
-        AbsExercise(name: "Skręty tułowia z unoszeniem nóg",        level: .simple, kind: [.calisthenics]),
-            
-        AbsExercise(name: "Hard Abs 1", level: .hard, kind: [.streching])
-        ]
-    
-    
-    let chestTricepsShoulders: [ChestTricepsShouldersExercises] = [
-        ChestTricepsShouldersExercises(name: "Pompki Klasyczne", level: .simple, kind: [.calisthenics]),
-        ChestTricepsShouldersExercises(name: "Popmpki Szerokie", level: .simple, kind: [.calisthenics]),
-            ChestTricepsShouldersExercises(name: "Pike push-up", level: .simple, kind: [.calisthenics]),
-            ChestTricepsShouldersExercises(name: "Dipy na krześle", level: .simple, kind: [.calisthenics]),
-            ChestTricepsShouldersExercises(name: "Wyciskanie Sztangi", level: .simple, kind: [.weightLifting])
-        ]
-    
-    
-    let backBiceps: [BackBicepsExercises] =  [
-            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu podchwyt",
-                                level: .simple, kind: [.calisthenics]),
-            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu szeroki nachwyt",
-                                level: .simple, kind: [.calisthenics]),
-            BackBicepsExercises(name: "Podciąganie poziome do krawędzi blatu stołu wąski nachwyt",
-                                level: .simple, kind: [.calisthenics]),
-            
-            BackBicepsExercises(name: "Superman",   level: .simple, kind: [.calisthenics]),
-            BackBicepsExercises(name: "Martwy ciąg",   level: .simple, kind: [.weightLifting])
-        ]
+    let abs: [AbsExercise]
     
     
-    let legs: [LegsExercises] = [
-            LegsExercises(name: "Przysiad / Głęboki przysiad",              level: .simple, kind: [.calisthenics]),
-            LegsExercises(name: "Wykroki",                                  level: .simple, kind: [.calisthenics]),
-            LegsExercises(name: "Unoszenie bioder w leżeniu na plecach",    level: .simple, kind: [.calisthenics]),
-            LegsExercises(name: "Wspięcia na palce jednej nogi",            level: .simple, kind: [.calisthenics]),
-            LegsExercises(name: "Przysiad ze sztangą na barkach",            level: .simple, kind: [.weightLifting]),
-        ]
+    let chestTricepsShoulders: [ChestTricepsShouldersExercises]
+    
+    
+    let backBiceps: [BackBicepsExercises]
+    
+    
+    let legs: [LegsExercises]
     
     
     var all: [ExerciseProtocol] {
@@ -57,7 +49,7 @@ struct ExercisesModel: Codable {
 
     
     
-    public func moveTopList(){
+    private func moveTopList(){
         let documentDirectory = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
         let pListURL = URL(fileURLWithPath: documentDirectory.path + "/ExercisesModel.plist", relativeTo: nil)
         let encoder = PropertyListEncoder()

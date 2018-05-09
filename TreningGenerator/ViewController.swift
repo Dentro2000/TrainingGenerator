@@ -12,7 +12,7 @@ class ViewController: UITableViewController, FilterViewControllerDelegate {
         return TraningGenerator(exeModel: model)
     }()
 
-    var model = ExercisesModel()
+    var model = ExercisesModel.model()
     lazy var workout: TraningGenerator.WorkautPlan = {
         return generateTrainig()
     }()
