@@ -1,27 +1,66 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController, FilterViewControllerDelegate {
     
-    @IBOutlet weak var ex1: UILabel!
-    @IBOutlet weak var ex2: UILabel!
-    @IBOutlet weak var ex3: UILabel!
-    @IBOutlet weak var ex4: UILabel!
-    @IBOutlet weak var ex5: UILabel!
-    @IBOutlet weak var ex6: UILabel!
-    @IBOutlet weak var ex7: UILabel!
-    @IBOutlet weak var ex8: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+    }
+
+    lazy var traningGenerator = {
+        return TraningGenerator(exeModel: model)
+    }()
+
+    var model = ExercisesModel()
+    lazy var workout: TraningGenerator.WorkautPlan = {
+        return generateTrainig()
+    }()
+
+    func generateTrainig() -> TraningGenerator.WorkautPlan {
+        return traningGenerator.workoutPlan(filter: [.calisthenics, .streching, .weightLifting])
+    }
+
+    @IBAction func generate(){
+        workout = generateTrainig()
+        tableView.reloadData()
+    }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return workout.sets[section].header
+    }
     
-    let exercises = ExercisesModel()
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return workout.sets.count
+    }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return workout.sets[section].exes.count
+    }
     
-    @IBAction func generateTraining() {
-        let arrayOfLables = [ex1,ex2, ex3, ex4, ex5, ex6, ex7, ex8].compactMap{ $0 }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "exCell", for: indexPath) as! TableViewCell
+   
+        cell.exLabel?.text = workout.sets[indexPath.section].exes[indexPath.row]
+        return cell
+    }
+    
+    override func tableView(_ tableView:    UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "filterViewSegue" {
+            let destinantion = segue.destination as! FilterViewController
+            destinantion.delegate = self
         
-        zip(arrayOfLables, exercises.workoutPlan).forEach { (arg) in
-            let (label, exercise) = arg
-            label.text = exercise.name
         }
+    }
+}
+
+extension ViewController {
+    func setKindOfExercies(_ kindOf:Set<ExerciseKind>) {
+        workout = traningGenerator.workoutPlan(filter: kindOf)
+        tableView.reloadData()
     }
 }
